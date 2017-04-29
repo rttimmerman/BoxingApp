@@ -4,13 +4,15 @@ using System.IO;
 using System.Xml.Serialization;
 using BoxingApp.Models;
 using Newtonsoft.Json;
+using Environment = Android.OS.Environment;
 
 namespace BoxingApp.Helpers
 {
     public static class SettingsHelper
     {
         private static string SettingsFolderName => "BoxingTimeSettings";
-        private static string SettingsFilePath => Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
+        private static string SettingsFilePath => Environment.ExternalStorageDirectory.AbsolutePath;
 
         public static bool IsProfileNameDuplicate(string name)
         {
@@ -23,6 +25,8 @@ namespace BoxingApp.Helpers
         {
             try
             {
+                CreateFolderIfItDoesNotExist();
+
                 var filename = GetProfileFilePath(profile.Name);
 
                 var serializedProfile = JsonConvert.SerializeObject(profile);
@@ -40,6 +44,15 @@ namespace BoxingApp.Helpers
             }
 
             return false;
+        }
+
+        private static void CreateFolderIfItDoesNotExist()
+        {
+            var folder = Path.Combine(SettingsFilePath,SettingsFolderName);
+            if (!Directory.Exists(folder))
+            {
+               Directory.CreateDirectory(folder);
+            }
         }
 
         public static Profile GetProfileSettings(string profileName)
