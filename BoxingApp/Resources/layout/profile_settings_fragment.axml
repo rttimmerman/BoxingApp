@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layoutProfileSettingsSelection"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp">
+        <TextView
+            android:text="Profile: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:paddingRight="15dp" />
+        <Spinner
+            android:id="@+id/spinnerSettingsProfiles"
+            android:layout_height="40dp"
+            android:layout_width="200dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layoutAddDeleteProfile"
+        android:layout_below="@id/layoutProfileSettingsSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="20dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="40dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="40dp"
+            android:text="Add"
+            android:textSize="15sp"
+            android:id="@+id/btnAddProfile" />
+        <Button
+            android:id="@+id/btnDeleteProfile"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="40dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="40dp"
+            android:text="Delete"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/layoutAddDeleteProfile"
+        android:layout_above="@+id/layoutCancelSave"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/scrollViewSettings"
+        android:background="@android:color/background_dark">
+        <LinearLayout
+            android:id="@+id/layoutSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/txtPreparationTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="Preparation Time: "
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/editTxtPreparationTime"
+                    android:hint="seconds"
+                    android:inputType="number"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/txtRoundTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="Round Time: "
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/editTxtRoundTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="seconds"
+                    android:inputType="number"
+                    android:gravity="right"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/txtRestTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="Rest Time: "
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/editTxtRestTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="seconds"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/txtNumberOfRounds"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="# of Rounds: "
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/editTxtNumberOfRounds"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:hint="seconds"
+                    android:gravity="right"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/txtMaxCombo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="Max Combo: "
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/editTxtMaxCombo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="seconds"
+                    android:inputType="number"
+                    android:gravity="right"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/txtScreenAlwaysOn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:text="Keep Screen On: "
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <ToggleButton
+                    android:id="@+id/toggleButtonScreenAlwaysOn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnComboSounds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Combo Sounds"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/layoutCancelSave"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp">
+        <Button
+            android:id="@+id/btnCancelProfile"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="40dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="40dp"
+            android:text="Cancel"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="40dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="40dp"
+            android:text="Save"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>
