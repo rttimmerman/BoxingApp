@@ -60,134 +60,140 @@ namespace BoxingApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060013
-			public const int btnAddProfile = 2131099667;
-			
-			// aapt resource value: 0x7f060025
-			public const int btnCancelProfile = 2131099685;
-			
-			// aapt resource value: 0x7f060024
-			public const int btnComboSounds = 2131099684;
-			
-			// aapt resource value: 0x7f060014
-			public const int btnDeleteProfile = 2131099668;
-			
-			// aapt resource value: 0x7f06002a
-			public const int btnDone = 2131099690;
-			
-			// aapt resource value: 0x7f06000e
-			public const int btnPauseResume = 2131099662;
-			
-			// aapt resource value: 0x7f060026
-			public const int btnSaveProfile = 2131099686;
-			
-			// aapt resource value: 0x7f06000d
-			public const int btnStart = 2131099661;
-			
-			// aapt resource value: 0x7f06000f
-			public const int btnStop = 2131099663;
-			
-			// aapt resource value: 0x7f06000a
-			public const int buttonEditProfiles = 2131099658;
-			
-			// aapt resource value: 0x7f060021
-			public const int editTxtMaxCombo = 2131099681;
-			
-			// aapt resource value: 0x7f06001f
-			public const int editTxtNumberOfRounds = 2131099679;
-			
-			// aapt resource value: 0x7f060019
-			public const int editTxtPreparationTime = 2131099673;
-			
-			// aapt resource value: 0x7f06001d
-			public const int editTxtRestTime = 2131099677;
-			
-			// aapt resource value: 0x7f06001b
-			public const int editTxtRoundTime = 2131099675;
-			
-			// aapt resource value: 0x7f060012
-			public const int layoutAddDeleteProfile = 2131099666;
-			
 			// aapt resource value: 0x7f060015
-			public const int layoutCancelSave = 2131099669;
-			
-			// aapt resource value: 0x7f060006
-			public const int layoutClockAndControls = 2131099654;
+			public const int btnAddProfile = 2131099669;
 			
 			// aapt resource value: 0x7f060027
-			public const int layoutDone = 2131099687;
+			public const int btnCancelProfile = 2131099687;
 			
-			// aapt resource value: 0x7f060003
-			public const int layoutProfileSelection = 2131099651;
-			
-			// aapt resource value: 0x7f060010
-			public const int layoutProfileSettingsSelection = 2131099664;
-			
-			// aapt resource value: 0x7f060017
-			public const int layoutSettings = 2131099671;
-			
-			// aapt resource value: 0x7f06000b
-			public const int layoutSound = 2131099659;
-			
-			// aapt resource value: 0x7f060028
-			public const int layoutSounds = 2131099688;
-			
-			// aapt resource value: 0x7f060005
-			public const int layoutStartStop = 2131099653;
-			
-			// aapt resource value: 0x7f060029
-			public const int listViewSounds = 2131099689;
-			
-			// aapt resource value: 0x7f060002
-			public const int mainFragmentContainer = 2131099650;
+			// aapt resource value: 0x7f060026
+			public const int btnComboSounds = 2131099686;
 			
 			// aapt resource value: 0x7f060016
-			public const int scrollViewSettings = 2131099670;
+			public const int btnDeleteProfile = 2131099670;
 			
-			// aapt resource value: 0x7f060004
-			public const int spinnerProfiles = 2131099652;
+			// aapt resource value: 0x7f06002c
+			public const int btnDone = 2131099692;
+			
+			// aapt resource value: 0x7f060010
+			public const int btnPauseResume = 2131099664;
+			
+			// aapt resource value: 0x7f060028
+			public const int btnSaveProfile = 2131099688;
+			
+			// aapt resource value: 0x7f06000f
+			public const int btnStart = 2131099663;
 			
 			// aapt resource value: 0x7f060011
-			public const int spinnerSettingsProfiles = 2131099665;
-			
-			// aapt resource value: 0x7f060008
-			public const int textClock = 2131099656;
-			
-			// aapt resource value: 0x7f060007
-			public const int textRound = 2131099655;
-			
-			// aapt resource value: 0x7f060009
-			public const int textStatus = 2131099657;
-			
-			// aapt resource value: 0x7f060001
-			public const int tglBtnSoundOnOff = 2131099649;
-			
-			// aapt resource value: 0x7f060023
-			public const int toggleButtonScreenAlwaysOn = 2131099683;
+			public const int btnStop = 2131099665;
 			
 			// aapt resource value: 0x7f06000c
-			public const int toggleButtonSound = 2131099660;
+			public const int buttonEditProfiles = 2131099660;
 			
-			// aapt resource value: 0x7f060020
-			public const int txtMaxCombo = 2131099680;
+			// aapt resource value: 0x7f060023
+			public const int editTxtMaxCombo = 2131099683;
 			
-			// aapt resource value: 0x7f06001e
-			public const int txtNumberOfRounds = 2131099678;
+			// aapt resource value: 0x7f060021
+			public const int editTxtNumberOfRounds = 2131099681;
+			
+			// aapt resource value: 0x7f06001b
+			public const int editTxtPreparationTime = 2131099675;
+			
+			// aapt resource value: 0x7f060001
+			public const int editTxtProfileName = 2131099649;
+			
+			// aapt resource value: 0x7f06001f
+			public const int editTxtRestTime = 2131099679;
+			
+			// aapt resource value: 0x7f06001d
+			public const int editTxtRoundTime = 2131099677;
+			
+			// aapt resource value: 0x7f060014
+			public const int layoutAddDeleteProfile = 2131099668;
+			
+			// aapt resource value: 0x7f060017
+			public const int layoutCancelSave = 2131099671;
+			
+			// aapt resource value: 0x7f060008
+			public const int layoutClockAndControls = 2131099656;
+			
+			// aapt resource value: 0x7f060029
+			public const int layoutDone = 2131099689;
+			
+			// aapt resource value: 0x7f060005
+			public const int layoutProfileSelection = 2131099653;
+			
+			// aapt resource value: 0x7f060012
+			public const int layoutProfileSettingsSelection = 2131099666;
+			
+			// aapt resource value: 0x7f060019
+			public const int layoutSettings = 2131099673;
+			
+			// aapt resource value: 0x7f06000d
+			public const int layoutSound = 2131099661;
+			
+			// aapt resource value: 0x7f06002a
+			public const int layoutSounds = 2131099690;
+			
+			// aapt resource value: 0x7f060007
+			public const int layoutStartStop = 2131099655;
+			
+			// aapt resource value: 0x7f06002b
+			public const int listViewSounds = 2131099691;
+			
+			// aapt resource value: 0x7f060004
+			public const int mainFragmentContainer = 2131099652;
 			
 			// aapt resource value: 0x7f060018
-			public const int txtPreparationTime = 2131099672;
+			public const int scrollViewSettings = 2131099672;
 			
-			// aapt resource value: 0x7f06001c
-			public const int txtRestTime = 2131099676;
+			// aapt resource value: 0x7f060006
+			public const int spinnerProfiles = 2131099654;
 			
-			// aapt resource value: 0x7f06001a
-			public const int txtRoundTime = 2131099674;
+			// aapt resource value: 0x7f060013
+			public const int spinnerSettingsProfiles = 2131099667;
 			
-			// aapt resource value: 0x7f060022
-			public const int txtScreenAlwaysOn = 2131099682;
+			// aapt resource value: 0x7f06000a
+			public const int textClock = 2131099658;
+			
+			// aapt resource value: 0x7f060009
+			public const int textRound = 2131099657;
+			
+			// aapt resource value: 0x7f06000b
+			public const int textStatus = 2131099659;
 			
 			// aapt resource value: 0x7f060000
-			public const int txtSoundName = 2131099648;
+			public const int textView = 2131099648;
+			
+			// aapt resource value: 0x7f060003
+			public const int tglBtnSoundOnOff = 2131099651;
+			
+			// aapt resource value: 0x7f060025
+			public const int toggleButtonScreenAlwaysOn = 2131099685;
+			
+			// aapt resource value: 0x7f06000e
+			public const int toggleButtonSound = 2131099662;
+			
+			// aapt resource value: 0x7f060022
+			public const int txtMaxCombo = 2131099682;
+			
+			// aapt resource value: 0x7f060020
+			public const int txtNumberOfRounds = 2131099680;
+			
+			// aapt resource value: 0x7f06001a
+			public const int txtPreparationTime = 2131099674;
+			
+			// aapt resource value: 0x7f06001e
+			public const int txtRestTime = 2131099678;
+			
+			// aapt resource value: 0x7f06001c
+			public const int txtRoundTime = 2131099676;
+			
+			// aapt resource value: 0x7f060024
+			public const int txtScreenAlwaysOn = 2131099684;
+			
+			// aapt resource value: 0x7f060002
+			public const int txtSoundName = 2131099650;
 			
 			static Id()
 			{
@@ -203,25 +209,28 @@ namespace BoxingApp
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int list_item_sound = 2130903040;
+			public const int input_dialog = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int main_activity = 2130903041;
+			public const int list_item_sound = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int main_fragment = 2130903042;
+			public const int main_activity = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int profile_settings_fragment = 2130903043;
+			public const int main_fragment = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int profile_spinner_dropdown_item = 2130903044;
+			public const int profile_settings_fragment = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int profile_spinner_item = 2130903045;
+			public const int profile_spinner_dropdown_item = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int sounds_fragment = 2130903046;
+			public const int profile_spinner_item = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int sounds_fragment = 2130903047;
 			
 			static Layout()
 			{

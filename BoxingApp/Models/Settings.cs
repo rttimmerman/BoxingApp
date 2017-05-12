@@ -5,7 +5,7 @@ namespace BoxingApp.Models
 {
     public class Settings
     {
-        public Settings(int prepTime, int roundTime, int restTime, int numRounds, int maxCombo, bool screenOn, List<Sound> comboSounds)
+        public Settings(int prepTime, int roundTime, int restTime, int numRounds, int maxCombo, bool screenOn, List<string> comboSounds)
         {
             PreparationTime = prepTime;
             RoundTime = roundTime;
@@ -23,6 +23,6 @@ namespace BoxingApp.Models
         public int NumberOfRounds;
         public int MaxCombo;
         public bool KeepScreenOn;
-        public List<Sound> ComboSounds;
+        public List<string> ComboSounds;
     }
 }

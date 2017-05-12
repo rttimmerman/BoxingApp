@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Timers;
+using Android.Content;
 using Android.OS;
+using Android.Preferences;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -65,10 +67,10 @@ namespace BoxingApp
 
         private int _counter;
 
-        private int _rounds = Globals.SelectedProfile.Settings.NumberOfRounds;
-        private int _prepare = Globals.SelectedProfile.Settings.PreparationTime;
-        private int _work = Globals.SelectedProfile.Settings.RoundTime;
-        private int _rest = Globals.SelectedProfile.Settings.RestTime;
+        private static int NumberOfRounds => Globals.SelectedProfile.Settings.NumberOfRounds;
+        private static int PrepTime => Globals.SelectedProfile.Settings.PreparationTime;
+        private static int RoundTime => Globals.SelectedProfile.Settings.RoundTime;
+        private static int RestTime => Globals.SelectedProfile.Settings.RestTime;
 
 
 
@@ -123,13 +125,13 @@ namespace BoxingApp
                 switch (CurrentTimerStatus)
                 {
                     case TimerStatus.Preparing:
-                        _counter = _work;
+                        _counter = RoundTime;
                         CurrentTimerStatus = TimerStatus.Working;
                         break;
                     case TimerStatus.Working:
-                        _counter = _rest;
+                        _counter = RestTime;
                         CurrentTimerStatus = TimerStatus.Resting;
-                        if (CurrentRound == _rounds)
+                        if (CurrentRound == NumberOfRounds)
                         {
                             Stop();
                             return;
@@ -137,7 +139,7 @@ namespace BoxingApp
                         CurrentRound++;
                         break;
                     case TimerStatus.Resting:
-                        _counter = _work;
+                        _counter = RoundTime;
                         CurrentTimerStatus = TimerStatus.Working;
                         break;
                 }
@@ -190,6 +192,17 @@ namespace BoxingApp
 
             profileAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             _spinnerProfiles.Adapter = profileAdapter;
+
+            var prefs = PreferenceManager.GetDefaultSharedPreferences(Activity);
+            if(prefs.Contains(Constants.SelectedProfile))
+            {
+                var selectedProfile = prefs.GetString(Constants.SelectedProfile, Constants.DefaultProfileName);
+
+                if (ProfileNames.Contains(selectedProfile))
+                {
+                    _spinnerProfiles.SetSelection(profileAdapter.GetPosition(selectedProfile));
+                }
+            }
         }
 
 
@@ -263,7 +276,7 @@ namespace BoxingApp
             _btnPauseResume.Visibility = ViewStates.Visible;
             _btnStop.Visibility = ViewStates.Visible;
 
-            _counter = _prepare;
+            _counter = PrepTime;
             CurrentRound = 1;
             CurrentTimerStatus = TimerStatus.Preparing;
             Timer.Start();
@@ -283,6 +296,17 @@ namespace BoxingApp
             _layoutClockAndControls = v.FindViewById<RelativeLayout>(Resource.Id.layoutClockAndControls);
 
             _toggleButtonSound.Checked = true;
+        }
+
+        public override void OnPause()
+        {
+            var prefs = PreferenceManager.GetDefaultSharedPreferences(Activity);
+            var editor = prefs.Edit();
+            editor.PutString("SelectedProfile",_spinnerProfiles.SelectedItem.ToString());
+            editor.Apply();
+
+
+            base.OnPause();
         }
 
         public void OnInit([GeneratedEnum] OperationResult status)

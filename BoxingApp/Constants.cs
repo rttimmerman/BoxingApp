@@ -17,10 +17,9 @@ namespace BoxingApp
     {
         public const string DefaultProfileName = "Default";
 
-        public static Profile DefaultProfile => new Profile("Default")
-        {
-            Settings = new Settings(3, 3, 3, 3, 3, true, new List<Sound>())
-        };
+        public static Profile DefaultProfile => new Profile(DefaultProfileName,
+            new Settings(3, 3, 3, 3, 3, true, new List<string>() {"Jab","Hook","Cross"}));
 
+        public static string SelectedProfile = nameof(SelectedProfile);
     }
 }

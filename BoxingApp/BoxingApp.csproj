@@ -61,6 +61,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Enums\TimerStatus.cs" />
     <Compile Include="Globals.cs" />
+    <Compile Include="Helpers\DialogHelper.cs" />
     <Compile Include="Helpers\SettingsHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainFragment.cs" />
@@ -90,6 +91,9 @@
     <AndroidResource Include="Resources\layout\profile_spinner_item.axml" />
     <AndroidResource Include="Resources\layout\sounds_fragment.axml" />
     <AndroidResource Include="Resources\layout\list_item_sound.axml" />
+    <AndroidResource Include="Resources\layout\input_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

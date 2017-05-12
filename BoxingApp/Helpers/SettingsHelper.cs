@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Xml.Serialization;
 using BoxingApp.Models;
 using Newtonsoft.Json;
@@ -59,12 +61,12 @@ namespace BoxingApp.Helpers
         {
             var filename = GetProfileFilePath(profileName);
 
-            var isDefaultProfile = 0 == string.Compare(profileName, Constants.DefaultProfileName,
-                                       StringComparison.Ordinal);
-
-            if (!File.Exists(filename) || isDefaultProfile)
+            if (!File.Exists(filename))
             {
-                return Constants.DefaultProfile;
+                var profile = Constants.DefaultProfile;
+                profile.Name = profileName;
+
+                SaveProfileSettings(profile);
             }
 
             using (var fs = new FileStream(filename, FileMode.Open, FileAccess.Read))
@@ -79,7 +81,7 @@ namespace BoxingApp.Helpers
 
         private static string GetProfileFilePath(string profileName)
         {
-            return Path.Combine(SettingsFilePath, $"{SettingsFolderName}/{profileName}Settings.xml");
+            return Path.Combine(SettingsFilePath, $"{SettingsFolderName}/{profileName}.json");
         }
 
         public static bool DeleteProfile(string profileName)
@@ -101,7 +103,24 @@ namespace BoxingApp.Helpers
 
         public static List<string> GetProfileNames()
         {
-            return new List<string> { "Default", "faggot", "haley" };
+            try
+            {
+                var paths = Directory.GetFiles(Path.Combine(SettingsFilePath, SettingsFolderName));
+
+                var profileNames = paths.Select(p=>Path.GetFileName(p)?.Replace(".json", "")).ToList();
+
+                if (!profileNames.Contains(Constants.DefaultProfileName))
+                {
+                    profileNames.Add(Constants.DefaultProfileName);
+                }
+
+                return profileNames;
+            }
+            catch (Exception e)
+            {
+                //todo:logging
+                throw;
+            }
         }
     }
 }
