@@ -19,7 +19,7 @@ namespace BoxingApp
 {
     public class MainFragment : NavigationFragment, TextToSpeech.IOnInitListener
     {
-        #region Clock Shit
+        #region Clock
         private string _clock;
         public string Clock
         {
